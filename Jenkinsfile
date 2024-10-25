@@ -2,6 +2,15 @@ pipeline {
   agent any
 
   stages {
+
+    stage('Clear Workspace') {
+      steps {
+        script {
+          echo 'Cleaning workspace...'
+          sh 'if [ -d 2309_ISA2 ]; then rm -rf 2309_ISA2; fi'
+        }
+      }
+    }
     
     stage('Clone Repository') {
       steps {
