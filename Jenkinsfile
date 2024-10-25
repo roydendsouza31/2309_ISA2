@@ -34,7 +34,7 @@ pipeline {
       steps {
         script {
           echo 'Deleting Docker container...'
-          sh 'deletescript.sh'
+          sh './deletescript'
         }
       }
     }
